@@ -3,29 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <TextView
-        android:id="@+id/titleView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="109dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="109dp"
-        android:layout_marginBottom="50dp"
-        android:text="Image Picker App"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/titleView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="109dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="111dp"
         android:layout_marginEnd="109dp"
         android:layout_marginBottom="50dp"
         android:text="Image Picker App"
@@ -50,27 +36,42 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="101dp"
         android:layout_marginEnd="101dp"
         android:layout_marginBottom="25dp"
-        android:text="Browse an image from the gallery"
+        android:text="Use the camera to capture an image or browse an image from the gallery"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/galleryButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/galleryButton"
+        android:id="@+id/cameraButton"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="156dp"
         android:layout_marginEnd="156dp"
-        android:layout_marginBottom="150dp"
-        android:text="Gallery"
+        android:layout_marginBottom="111dp"
+        android:text="Camera"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/galleryButton" />
+
+    <Button
+        android:id="@+id/galleryButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="10dp"
+        android:text="Gallery"
+        app:layout_constraintBottom_toTopOf="@+id/cameraButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
