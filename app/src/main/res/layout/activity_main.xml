@@ -41,7 +41,7 @@
         android:layout_marginStart="101dp"
         android:layout_marginEnd="101dp"
         android:layout_marginBottom="25dp"
-        android:text="Use the camera to capture an image or browse an image from the gallery"
+        android:text="Use the camera to capture an image (default or full-size) or browse an image from the gallery"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/galleryButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,28 +50,41 @@
 
     <Button
         android:id="@+id/cameraButton"
-        android:layout_width="100dp"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginEnd="156dp"
-        android:layout_marginBottom="111dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="10dp"
         android:text="Camera"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/fullSizeButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/galleryButton" />
 
     <Button
         android:id="@+id/galleryButton"
-        android:layout_width="100dp"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginEnd="155dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="120dp"
         android:layout_marginBottom="10dp"
         android:text="Gallery"
         app:layout_constraintBottom_toTopOf="@+id/cameraButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/fullSizeButton"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="75dp"
+        android:text="Camera Full-Size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cameraButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
