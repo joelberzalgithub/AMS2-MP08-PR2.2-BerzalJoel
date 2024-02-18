@@ -83,6 +83,9 @@ public class MainActivity extends AppCompatActivity {
         Button galleryButton = findViewById(R.id.galleryButton);
         galleryButton.setOnClickListener(v -> pickPictureLauncher.launch(new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)));
 
+        Button appGalleryButton = findViewById(R.id.appGalleryButton);
+        appGalleryButton.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, GalleryActivity.class)));
+
         Button cameraButton = findViewById(R.id.cameraButton);
         cameraButton.setOnClickListener(v -> {
             if (checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
@@ -103,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     @SuppressLint("QueryPermissionsNeeded")
     private void dispatchTakePictureIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -121,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
             takeFullSizePictureLauncher.launch(takePictureIntent);
         }
     }
+
     private File createImageFile() throws IOException {
         // Creem el nom d'arxiu d'una imatge
         @SuppressLint("SimpleDateFormat") String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
@@ -132,6 +137,7 @@ public class MainActivity extends AppCompatActivity {
                 storageDir      /* Ubicació */
         );
     }
+
     private File getLatestPhoto() {
         File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
         assert storageDir != null;
